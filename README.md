@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website!
 
-🔗 **Live Website**: [https://akashks.github.io](https://akashks.github.io)
+🔗 **Live Website**: [https://AkashKS04.github.io](https://AkashKS04.github.io)
 
 ---
 
