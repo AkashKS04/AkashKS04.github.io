@@ -1,0 +1,32 @@
+<!-- digital-thermometer.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Digital Thermometer</title>
+  <style>
+    body{background:#000;color:#fff;font-family:Segoe UI,sans-serif;text-align:center;padding:40px;}
+    img{max-width:600px;width:90%;border-radius:8px;margin-bottom:20px;}
+    pre{background:#222;padding:15px;border-radius:6px;overflow-x:auto;text-align:left;}
+    a{color:#ff6600;text-decoration:none;}
+  </style>
+</head>
+<body>
+  <h1>Digital Thermometer</h1>
+  <img src="images/digital-thermometer.jpg" alt="Digital Thermometer">
+  <pre><code>#include &lt;LiquidCrystal.h&gt;
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+const int sensorPin = A0;
+void setup(){
+  lcd.begin(16,2);
+}
+void loop(){
+  float voltage = analogRead(sensorPin)*5.0/1024.0;
+  float tempC = voltage*100.0;
+  lcd.setCursor(0,0);
+  lcd.print(\"Temp: \"); lcd.print(tempC); lcd.print(\" C\");
+  delay(1000);
+}</code></pre>
+  <p><a href=\"index.html\">← Back to Portfolio</a></p>
+</body>
+</html>
