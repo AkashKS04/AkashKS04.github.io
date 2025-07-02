@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akash K S | Portfolio</title>
   <!-- Font Awesome for icons -->
-  <link rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
     body { background: linear-gradient(to right, #000000, #ff6600, #d64300); color: #fff; }
@@ -33,12 +31,8 @@
 
     /* ===== PROJECTS ===== */
     .project { background: rgba(255, 255, 255, 0.08); padding: 20px; border-radius: 10px; margin-bottom: 18px; }
-    details.project-details { margin-top: 12px; }
-    details.project-details summary { cursor: pointer; color: #ff6600; font-weight: 600; outline: none; }
-    details.project-details[open] summary { color: #d64300; }
-    .project-details-content { margin-top: 10px; }
-    .project-details-content img { max-width: 100%; border-radius: 6px; margin-bottom: 10px; }
-    pre { background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 6px; overflow-x: auto; }
+    .project-link { display: inline-block; margin-top: 12px; color: #ff6600; font-weight: 600; text-decoration: none; }
+    .project-link:hover { color: #d64300; }
 
     /* ===== SKILLS & CONTACT ===== */
     .skill { background: rgba(255,255,255,0.1); padding: 8px 12px; border-radius: 6px; display: inline-block; margin: 6px 6px; }
@@ -88,66 +82,31 @@
   <section>
     <h2>Projects</h2>
 
+    <!-- Clap Switch – no details button -->
     <div class="project">
       <h3>Clap Switch Circuit</h3>
       <p>Designed a circuit to toggle an LED using sound input via a mic and 555 timer.</p>
-      <details class="project-details">
-        <summary>View Details</summary>
-        <div class="project-details-content">
-          <img src="images/clap-switch.jpg" alt="Clap Switch Circuit">
-          <pre><code>// 555 timer clap switch schematic – replace with real code if microcontroller used</code></pre>
-        </div>
-      </details>
     </div>
 
+    <!-- Digital Thermometer – opens new tab with separate page -->
     <div class="project">
       <h3>Digital Thermometer</h3>
       <p>Built using Arduino Uno, LM35 sensor, and LCD to monitor real-time temperature.</p>
-      <details class="project-details">
-        <summary>View Details</summary>
-        <div class="project-details-content">
-          <img src="images/digital-thermometer.jpg" alt="Digital Thermometer">
-          <pre><code>#include <LiquidCrystal.h>
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
-const int sensorPin = A0;
-void setup() {
-  lcd.begin(16, 2);
-}
-void loop() {
-  float voltage = analogRead(sensorPin) * 5.0 / 1024.0;
-  float tempC = voltage * 100.0;
-  lcd.setCursor(0,0);
-  lcd.print("Temp: ");
-  lcd.print(tempC);
-  lcd.print(" C");
-  delay(1000);
-}</code></pre>
-        </div>
-      </details>
+      <a class="project-link" href="digital-thermometer.html" target="_blank">View Details</a>
     </div>
 
+    <!-- AGV – opens new tab with separate page -->
     <div class="project">
       <h3>Automated Guided Vehicle</h3>
       <p>Used ESP8266, IR/Ultrasonic sensors, MPPT to create a smart AGV with monitoring system.</p>
-      <details class="project-details">
-        <summary>View Details</summary>
-        <div class="project-details-content">
-          <img src="images/agv.jpg" alt="Automated Guided Vehicle">
-          <pre><code>// Placeholder code snippet – insert your ESP8266 AGV control code here</code></pre>
-        </div>
-      </details>
+      <a class="project-link" href="agv.html" target="_blank">View Details</a>
     </div>
 
+    <!-- Nanocomposites – direct external link -->
     <div class="project">
       <h3>Nanocomposites Research Project</h3>
       <p>Published Q1 Journal paper on Ce3+:Si₃Al₂Si₃O₁₂ properties for energy and security applications.</p>
-      <details class="project-details">
-        <summary>View Details</summary>
-        <div class="project-details-content">
-          <img src="images/nanocomposites.jpg" alt="Nanocomposites Research">
-          <pre><code>Link to published paper: Journal of Alloys & Compounds, 2025</code></pre>
-        </div>
-      </details>
+      <a class="project-link" href="https://www.sciencedirect.com/science/article/abs/pii/S0925838825017918" target="_blank">View Details</a>
     </div>
   </section>
 
