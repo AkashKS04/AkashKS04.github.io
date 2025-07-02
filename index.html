@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Akash K S | Portfolio</title>
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-bx4p+QJ1LjtX5KcVej4Lq6qxYwXU7hp0u7DP9jHq3yTj2T4ZgN1aYtwJv4/2PMVZK7SWDRdJFuCnr6X6DcE5xg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
     * {
       box-sizing: border-box;
@@ -17,15 +19,38 @@
       color: #fff;
     }
 
+    /* ===== HEADER / HERO ===== */
     header {
-      background: rgba(0, 0, 0, 0.85);
-      padding: 20px;
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('future-tech.jpg') center/cover no-repeat;
+      padding: 60px 20px 80px;
       text-align: center;
+      position: relative;
     }
 
     header h1 {
-      font-size: 2.5rem;
+      font-size: 3rem;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
       color: #ff6600;
+      font-size: 1.8rem;
+      margin: 0 8px;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffffff;
     }
 
     section {
@@ -35,52 +60,62 @@
     }
 
     h2 {
-      color: #ff6600;
+      color: #ffad66;
       margin-bottom: 10px;
     }
 
-    .project, .skill {
-      background: rgba(255, 255, 255, 0.1);
-      padding: 15px;
-      border-radius: 8px;
-      margin-bottom: 15px;
+    /* ===== PROJECTS ===== */
+    .project {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 18px;
     }
 
-    .project a {
-      display: inline-block;
+    details.project-details {
+      margin-top: 12px;
+    }
+
+    details.project-details summary {
+      cursor: pointer;
+      color: #ff6600;
+      font-weight: 600;
+      outline: none;
+    }
+
+    details.project-details[open] summary {
+      color: #d64300;
+    }
+
+    .project-details-content {
       margin-top: 10px;
-      color: #fff;
-      background: #ff6600;
-      padding: 6px 12px;
-      border-radius: 5px;
-      text-decoration: none;
     }
 
-    .project a:hover {
-      background: #d64300;
+    .project-details-content img {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
 
+    pre {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 10px;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+
+    /* ===== SKILLS & CONTACT ===== */
     .skill {
-      margin-bottom: 8px;
+      background: rgba(255,255,255,0.1);
+      padding: 8px 12px;
+      border-radius: 6px;
+      display: inline-block;
+      margin: 6px 6px;
     }
 
     .contact a {
       color: #fff;
       text-decoration: underline;
-    }
-
-    .resume-btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 10px 18px;
-      background: #ff6600;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-
-    .resume-btn:hover {
-      background-color: #d64300;
     }
 
     form {
@@ -101,35 +136,57 @@
       background-color: #ff6600;
       color: #fff;
       cursor: pointer;
+      border: none;
     }
 
     input[type="submit"]:hover {
       background-color: #d64300;
     }
 
+    /* ===== FOOTER ===== */
+    .resume-btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 18px;
+      background: #ff6600;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .resume-btn:hover {
+      background-color: #d64300;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 20px 20px 40px;
       background: rgba(0, 0, 0, 0.9);
       color: #bbb;
     }
 
     @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
+      header {
+        padding: 40px 15px 60px;
       }
-      section {
-        padding: 30px 15px;
+      header h1 {
+        font-size: 2.2rem;
       }
     }
   </style>
 </head>
 <body>
+  <!-- ===== HERO HEADER ===== -->
   <header>
     <h1>Akash K S</h1>
     <p>Embedded Systems & IoT Enthusiast | EEE Student</p>
+    <div class="social-icons">
+      <a href="https://github.com/AkashKS04" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/akashks04" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
   </header>
 
+  <!-- ===== ABOUT ===== -->
   <section>
     <h2>About Me</h2>
     <p>
@@ -138,57 +195,85 @@
       innovative solutions to real world problems. Seeking opportunities to learn, grow, and contribute
       to impactful engineering projects.
     </p>
-    <a class="resume-btn" href="Akash_K_S.pdf" download>Download Resume</a>
   </section>
 
+  <!-- ===== PROJECTS ===== -->
   <section>
     <h2>Projects</h2>
+
     <div class="project">
       <h3>Clap Switch Circuit</h3>
       <p>Designed a circuit to toggle an LED using sound input via a mic and 555 timer.</p>
-      <a href="#">View Code</a>
+      <details class="project-details">
+        <summary>View Details</summary>
+        <div class="project-details-content">
+          <img src="images/clap-switch.jpg" alt="Clap Switch Circuit">
+          <pre><code>// 555 timer clap switch schematic – replace with real code if microcontroller used</code></pre>
+        </div>
+      </details>
     </div>
+
     <div class="project">
       <h3>Digital Thermometer</h3>
       <p>Built using Arduino Uno, LM35 sensor, and LCD to monitor real-time temperature.</p>
-      <a href="#">View Code</a>
+      <details class="project-details">
+        <summary>View Details</summary>
+        <div class="project-details-content">
+          <img src="images/digital-thermometer.jpg" alt="Digital Thermometer">
+          <pre><code>#include <LiquidCrystal.h>
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+const int sensorPin = A0;
+void setup() {
+  lcd.begin(16, 2);
+}
+void loop() {
+  float voltage = analogRead(sensorPin) * 5.0 / 1024.0;
+  float tempC = voltage * 100.0;
+  lcd.setCursor(0,0);
+  lcd.print("Temp: ");
+  lcd.print(tempC);
+  lcd.print(" C");
+  delay(1000);
+}</code></pre>
+        </div>
+      </details>
     </div>
+
     <div class="project">
       <h3>Automated Guided Vehicle</h3>
       <p>Used ESP8266, IR/Ultrasonic sensors, MPPT to create a smart AGV with monitoring system.</p>
-      <a href="#">View Code</a>
+      <details class="project-details">
+        <summary>View Details</summary>
+        <div class="project-details-content">
+          <img src="images/agv.jpg" alt="Automated Guided Vehicle">
+          <pre><code>// Placeholder code snippet – insert your ESP8266 AGV control code here</code></pre>
+        </div>
+      </details>
     </div>
+
     <div class="project">
       <h3>Nanocomposites Research Project</h3>
       <p>Published Q1 Journal paper on Ce3+:Si₃Al₂Si₃O₁₂ properties for energy and security applications.</p>
-      <a href="#">View Paper</a>
+      <details class="project-details">
+        <summary>View Details</summary>
+        <div class="project-details-content">
+          <img src="images/nanocomposites.jpg" alt="Nanocomposites Research">
+          <pre><code>Link to published paper: Journal of Alloys & Compounds, 2025</code></pre>
+        </div>
+      </details>
     </div>
   </section>
 
+  <!-- ===== SKILLS ===== -->
   <section>
     <h2>Skills</h2>
-    <div class="skill">C, Python</div>
-    <div class="skill">Arduino Uno, ESP32</div>
-    <div class="skill">KiCad, AutoCAD, Altium Designer</div>
-    <div class="skill">MATLAB</div>
+    <span class="skill">C, Python</span>
+    <span class="skill">Arduino Uno, ESP32</span>
+    <span class="skill">KiCad, AutoCAD, Altium Designer</span>
+    <span class="skill">MATLAB</span>
   </section>
 
+  <!-- ===== CONTACT ===== -->
   <section class="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:akashks0423@gmail.com">akashks0423@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/AkashKS04" target="_blank">github.com/AkashKS04</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/akashks04" target="_blank">linkedin.com/in/akashks04</a></p>
-
-    <form action="https://formspree.io/f/mnnvrazo" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-      <input type="submit" value="Send Message">
-    </form>
-  </section>
-
-  <footer>
-    &copy; 2025 Akash K S. All rights reserved.
-  </footer>
-</body>
-</html>
+    <p>Email: <a href="mailto:akashks0423
